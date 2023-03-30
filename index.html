@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prac Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <!--Estilos CSS aquí-->
+
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+    <!--Nav-bar-->
+    
+    <!--Carro (para implementar despues)-->
+      
+        <!--<a class="btn btn-link d-flex" href="/cart/display/carro" title="carro">
+        <i class="fas fa-shopping-bag mx-1" aria-hidden="true"></i>
+        <span data-bs="cart.items" class="badge badge-secondary">0</span>
+        <i class="fas fa-shopping-bag mx-1" aria-hidden="true"></i>
+        <span data-bs="cart.items" class="badge badge-secondary">0</span>
+        </a>-->
+    <header>
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                Prac Bootstrap</a>
+                <!-- Si se desea agregar una imagen (logo) a la barra se elimina la linea con la clase 
+                    .navbar-brand y se reemplaza por la siguiente linea de codigo: -->
+            <!-- <nav class="navbar bg-body-tertiary">
+                <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Bootstrap" width="30" height="24">
+                </a>
+                </div>
+            </nav> -->
+
+            <!-- Si se desea agregar una imagen con texto al lado se escribe la siguiente linea:
+                <nav class="navbar bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#">
+                            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                            Bootstrap
+                        </a>
+                    </div>
+                </nav> 
+                Nota: al lado de img se debe agregar class="d-inline-block align-text-top"-->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <!-- Opcion desplegable -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li> -->
+                </ul>
+                <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+        
+        <!--Base nav-->
+        <di>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Disabled</a>
+            </li>
+        </ul>
+        </di>
+    </header>
+    <!--Carucel
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" class="active" aria-current="true" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" class="active" aria-current="true" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/Oferta.png"  class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Redes-Sociales.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Contactanos</h5>
+                <p>Visitanos en nuestras redes sociales</p>
+              </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+-->
+
+    <!--Carrucel-->
+    <br>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner" style="text-align: center;">
+          <div class="carousel-item active" style="text-align: center;">
+            <img src="img/cassette.jpg" width="1200" height="500" style="text-align: center;" >
+            <div class="container">
+              <div class="carousel-caption text-center">
+                <h1>Cassette</h1>
+                <p>PUTA QUE OFERTON</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Ver</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="text-align: center;">
+            <img src="img/Redes-Sociales.jpg" width="1200" height="500">  
+            <div class="container">
+              <div class="carousel-caption text-center"> 
+                <h1>Contactanos</h1>
+                <p>Visita nuestras redes sociales</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Ver</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" style="text-align: center;">
+            <img src="img/super-oferta-polish-translation-great-260nw-1814637365.webp" width="1200" height="500">
+            <div class="container">
+              <div class="carousel-caption text-center">
+                <h1>RETO JOTO CHILI PEPAAA</h1>
+                <p>CUREIZZI DAIAMONDO</p>
+                <p><a class="btn btn-lg btn-primary" href="#">Ver</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Atras</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+
+      <br>
+      <br>
+      <h2 style="text-align: center;">Te recomendamos</h2>
+      <hr>
+      <br>
+
+      <!--Cards-->
+      <div class="row row-cols-2 row-cols-md-6 g-3 mt-3 justify-content-center">
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" height="200" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Vinilo</h5>
+              <h5 class="card-title">Red Hot Chili Pepper / Stadium Arcadium</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/Abba.jpg" height="200" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cassette</h5>
+              <h5 class="card-title">Abba / Greatest Hits Gold 30th Anniversary</h5>
+              <p class="card-text">This is a short card.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/Billie Eilish.jpg" height="200" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cassette</h5>
+              <h5 class="card-title">Billie Eilish / Happier Than Ever</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img src="img/Guardians of the galaxy.jpg" height="200" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Cassette</h5>
+              <h5 class="card-title">Marvel's Guardians of the Galaxy: Cosmic Mix Vol. 1</h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </body>
+</html>
