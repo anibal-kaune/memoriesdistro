@@ -88,12 +88,177 @@
               <a href="contacto.html"><button type="button" class="btn btn-light text-dark me-2">Contáctanos</button></a>
               <a href="login.html"><button type="button" class="btn btn-light text-dark me-2">Ingresar</button></a>
               <a href="registro.html"><button type="button" class="btn btn-primary me-2">Regístrate</button></a>
+              <a href="login.html"><button type="button" class="btn btn-success text-light me-2">Carro</button></a>
               
             </div>
         </ul>
       </di>
+
+      <br>
+      <h1 style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif; text-align: center;">CDs</h1>
+
+      <!--Grid card(solo estetico)-->
+      <div class="row row-cols-1 row-cols-md-1 g-3 mt-3">
+        <div class="col">
+          <div class="card">
+            <img src="img/Used-CDs_thumb.jpg" class="card-img-top" height="300" alt="...">
+            <div class="card-img-overlay" style="text-align: center;">
+
+            </div>
+          </div>
+        </div>
+        </div>
+      <br>
   </header>
 
+  <section>
+
+    <!--Prueba filtros-->
+    <div class="row mb-3 g-5">
+      <div class="col-md-4 col-lg-3 ">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-dark">Filtros</span>
+          
+        </h4>
+
+        <form class="card p-2">
+          <div class="input-group">
+            <button type="button" class="btn btn-primary">Filtrar</button>
+            <button type="button" class="btn btn-secondary">Limpiar</button>
+          </div>
+        </form>
+
+        <ul class="list-group mb-3">
+
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <label for="customRange1" class="form-label">Precio</label>
+              <input type="range" class="form-range" id="customRange1">
+            </div>
+            
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                      Accordion Item #1
+                    </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                      <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+          </li>
+
+          <li class="list-group-item d-flex justify-content-between lh-sm">
+            <div>
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Ordenar por</option>
+                <option value="1">Nombres de A a Z</option>
+                <option value="2">Nombre de Z a A</option>
+                <option value="3">Precio de menor a mayor</option>
+                <option value="4">Precio de mayor a menor</option>
+              </select>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>  
+
+
+
+    <!--cards productos-->
+    <div class="row row-cols-2 row-cols-md-5 g-3 mt-3 justify-content-center">
+        
+      <div class="col">
+        <div class="card h-25" style="height: auto;">
+          <a href="producto.html"><img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" height="200" class="card-img-top" alt="..."></a>
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="text-align:start;">Vinilo</h5>
+            <h5 class="card-title" style="text-align: start;">Red Hot Chili Pepper / Stadium Arcadium</h5>
+            <p class="card-text"><br><br><s>$ 9.990</s></p>
+            <p class="card-text" style="color:green"><strong>$ 6.990</strong></p>
+            <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-25" style="height: auto;">
+          <img src="img/Abba.jpg" height="200" class="card-img-top" alt="...">
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="text-align: start;">Cassette</h5>
+            <h5 class="card-title" style="text-align: start;">Abba / Greatest Hits Gold 30th Anniversary</h5>
+            <p class="card-text"><br><br><s>$ 19.990</s></p>
+            <p class="card-text" style="color:green"><strong>$ 15.990</strong></p>
+            <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-25" style="height: auto;">
+          <img src="img/Billie Eilish.jpg" height="200" class="card-img-top" alt="...">
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="text-align: start;">Cassette</h5>
+            <h5 class="card-title" style="text-align: start;">Billie Eilish / Happier Than Ever</h5>
+            <p class="card-text"><br><br><br><s>$ 46.990</s></p>
+            <p class="card-text" style="color:green"><strong>$ 35.990</strong></p>
+            <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-25" style="height: auto;">
+          <img src="img/Guardians of the galaxy.jpg" height="200" class="card-img-top" alt="...">
+          <div class="card-body" style="text-align: center;">
+            <h5 class="card-title" style="text-align: start;">Cassette</h5>
+            <h5 class="card-title" style="text-align: start;">Marvel's Guardians of the Galaxy: Cosmic Mix Vol. 1</h5>
+            <p class="card-text"><br><s>$ 39.990</s></p>
+            <p class="card-text" style="color:green"><strong>$ 29.990</strong></p>
+            <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!--paginacion-->
+    <nav class="mt-4" aria-label="...">
+      <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+
+        <li class="page-item active" aria-current="page">
+          <a class="page-link" href="#">1</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">4</a></li>
+        <li class="page-item"><a class="page-link" href="#">5</a></li>
+
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+  </section>
 
 
     <footer class="container py-3">
