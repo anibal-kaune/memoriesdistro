@@ -89,14 +89,53 @@
       <di>
         <ul class="nav justify-content-end" style="background-color: rgb(92, 92, 92);">
             <div class="text-end">
-              <a href="contacto.html"><button type="button" class="btn btn-light text-dark me-2">Contáctanos</button></a>
+              <a href="#"><button type="button" class="btn btn-light text-dark me-2">Contáctanos</button></a>
               <a href="login.html"><button type="button" class="btn btn-light text-dark me-2">Ingresar</button></a>
               <a href="registro.html"><button type="button" class="btn btn-primary me-2">Regístrate</button></a>
-              <a href="login.html"><button type="button" class="btn btn-success text-light me-2">Carro</button></a>
+              <button class="btn btn-success text-light me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <!-- <i class="fa fa-c"></i> -->
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg> -->
+                
+                <i class="fa-solid fa-cart-shopping"></i>
+                <strong>Carro</strong>
+              </button>
               
             </div>
         </ul>
       </di>
+
+      <div class="offcanvas offcanvas-end bg-dark text-white" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carro de compra</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <table class="table text-light">
+              <thead>
+                <tr>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Precio</th>
+                </tr>
+              </thead>
+              <tbody id="carrito-producto">
+                <tr>
+                  <td></td>
+                  <td>No hay productos agregados</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+
+            <div class="d-grid gap-2">
+                <button class="btn btn-success btn-lg" type="button">
+                    Enviar compra a wsp <i class="fa-brands fa-whatsapp"></i> $ <span id="carrito-precio">0</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
 
       <br>
       <h1 style="font-family:Rockwell, Courier Bold, Courier, Georgia, Times, Times New Roman, serif; text-align: center;">CDs</h1>
@@ -221,15 +260,19 @@
         <div class="row row-cols-2 row-cols-md-5 g-3 mt-3 justify-content-center">
         
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-1"
+            data-img="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg"
+            data-nombre="CD Red Hot Chili Pepper / Stadium Arcadium 2 CDs"
+            data-precio="6990"
+            style="height: auto;">
               <a href="producto.html"><img src="img/Red-Hot-Chili-Peppers-Stadium-Arcadium.jpg" height="200" class="card-img-top" alt="..."></a>
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align:start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Red Hot Chili Pepper / Stadium Arcadium 2 CDs</h5>
-                <p class="card-text"><s>$ 9.990</s></p>
+                <p class="card-text"><br><s>$ 9.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 6.990</strong></p>
                 <!-- Button trigger modal -->
-                <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-outline-dark" onclick="comprar(1)" data-bs-toggle="modal" data-bs-target="#exampleModal" >
                   Agregar al carro
                 </button>
 
@@ -258,40 +301,52 @@
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-8"
+            data-img="img/bruno_mars.jpg"
+            data-nombre="CD Bruno Mars / Unorthodox Jukebox"
+            data-precio="5490"
+            style="height: auto;">
               <img src="img/bruno_mars.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Bruno Mars / Unorthodox Jukebox</h5>
-                <p class="card-text"><br><s>$ 7.990</s></p>
+                <p class="card-text"><br><br><s>$ 7.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 5.490</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(8)">Agregar al carro</button>
               </div>
             </div>
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-13"
+            data-img="img/ed sheeran.jpg"
+            data-nombre="CD Ed Sheeran / Divide"
+            data-precio="6990"
+            style="height: auto;">
               <img src="img/ed sheeran.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align:start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Ed Sheeran / Divide</h5>
                 <p class="card-text"><br><br><s>$ 8.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 6.990</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(13)">Agregar al carro</button>
               </div>
             </div>
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-10"
+            data-img="img/Meteora.jpeg"
+            data-nombre="CD Linkin Park / Meteora"
+            data-precio="16990"
+            style="height: auto;">
               <img src="img/Meteora.jpeg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Linkin Park / Meteora</h5>
                 <p class="card-text"><br><br><s>$ 19.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 16.990</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(10)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -301,52 +356,68 @@
         <div class="row row-cols-2 row-cols-md-5 g-3 mt-3 justify-content-center">
         
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-14"
+            data-img="img/deep_purple.jpg"
+            data-nombre="CD Deep Purple / In Concert 1970-1970 2 CDs"
+            data-precio="7990"
+            style="height: auto;">
               <img src="img/deep_purple.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Deep Purple / In Concert 1970-1970 2 CDs</h5>
                 <p class="card-text"><s>$ 10.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 7.990</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(14)">Agregar al carro</button>
               </div>
             </div>
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-15"
+            data-img="img/madonna.jpg"
+            data-nombre="CD Madonna / Ray of Light"
+            data-precio="4990"
+            style="height: auto;">
               <img src="img/madonna.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Madonna / Ray of Light</h5>
                 <p class="card-text"><br><s>$ 6.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 4.990</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(15)">Agregar al carro</button>
               </div>
             </div>
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-16"
+            data-img="img/david_bowie.jpg"
+            data-nombre="CD David Bowie / The man who sold the World"
+            data-precio="7990"
+            style="height: auto;">
               <img src="img/david_bowie.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">David Bowie / The man who sold the World </h5>
                 <p class="card-text" style="color:black"><strong><br><br><br>$ 7.990</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(16)">Agregar al carro</button>
               </div>
             </div>
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-17"
+            data-img="img/faith_no_more.jpg"
+            data-nombre="CD Faith No More / The real thing"
+            data-precio="29990"
+            style="height: auto;">
               <img src="img/faith_no_more.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Faith No More / The real thing</h5>
                 <p class="card-text"><br><s>$ 39.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 29.990</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(17)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -356,51 +427,67 @@
         <div class="row row-cols-2 row-cols-md-5 g-3 mt-3 justify-content-center">
         
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-18"
+            data-img="img/mana.jpg"
+            data-nombre="CD MANÁ / Amar es combatir"
+            data-precio="5490"
+            style="height: auto;">
               <img src="img/mana.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">MANÁ / Amar es combatir</h5>
                 <p class="card-text"><br><s>$ 7.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 5.490</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(18)">Agregar al carro</button>
               </div>
             </div>
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-9"
+            data-img="img/the_wall.jpeg"
+            data-nombre="CD Pink Floyd / The Wall (Remastered) 2 CDs"
+            data-precio="10490"
+            style="height: auto;">
               <img src="img/the_wall.jpeg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Pink Floyd / The Wall (Remastered) 2 CDs</h5>
-                <p class="card-text"><br><s>$ 14.990</s></p>
+                <p class="card-text"><br><br><s>$ 14.990</s></p>
                 <p class="card-text" style="color:green"><strong>$ 10.490</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(9)">Agregar al carro</button>
               </div>
             </div>
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-19"
+            data-img="img/Pink_floyd_2.jpg"
+            data-nombre="CD Pink Floyd / The Division Bell"
+            data-precio="9990"
+            style="height: auto;">
               <img src="img/Pink_floyd_2.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Pink Floyd / The Division Bell</h5>
                 <p class="card-text" style="color:black"><strong><br><br><br>$ 9.990</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(19)">Agregar al carro</button>
               </div>
             </div>
           </div>
     
           <div class="col">
-            <div class="card h-25" style="height: auto;">
+            <div class="card h-25" id="producto-20"
+            data-img="img/cat_stevens.jpg"
+            data-nombre="CD Cat Stevens / Tea For The Tillerman"
+            data-precio="9990"
+            style="height: auto;">
               <img src="img/cat_stevens.jpg" height="200" class="card-img-top" alt="...">
               <div class="card-body" style="text-align: center;">
                 <h5 class="card-title" style="text-align: start;">CD</h5>
                 <h5 class="card-title" style="text-align: start;">Cat Stevens / Tea For The Tillerman</h5>
                 <p class="card-text" style="color:black"><strong><br><br><br>$ 9.990</strong></p>
-                <a href="#" class="btn btn-outline-dark">Agregar al carro</a>
+                <button class="btn btn-outline-dark" type="button" onclick="comprar(20)">Agregar al carro</button>
               </div>
             </div>
           </div>
@@ -481,6 +568,10 @@
         </div>
   
       </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>  
+      <script src="js/index.js"></script>
     
 </body>
 </html>
