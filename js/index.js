@@ -1,3 +1,5 @@
+//carro de compra
+
 var array_productos = [];
 
 if (localStorage.getItem('PRODUCTOS')) {
@@ -51,6 +53,7 @@ function llenar_carrtio() {
     $('#carrito-precio').html(total);        
 }
 
+//Validaciones
 function validarNombre(params) {
 
     var textoSalida = document.getElementById("fb-nombre");
