@@ -241,8 +241,12 @@
       <label for="floatingInput">Correo electrónico</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control" onkeyup="validarContraseña(this)" id="floatingPassword" placeholder="Password">
+      <div class="invalid-feedback" id="fb-contraseña">
+                      
+      </div>
       <label for="floatingPassword">Contraseña</label>
+      
       <p style="text-align: end;">¿Problemas con tu contraseña? <a href="#"> Recuperar contraseña</a></p>
     </div>
 
